@@ -9,6 +9,9 @@ class BaseApi:
     def check_status_code_200(self):
         assert self.status_code < 300, f"Status code is not less than 300: {self.status_code}"
 
+    def check_status_code_404(self):
+        assert self.status_code == 404, f"Status code is not 404: {self.status_code}"
+
     def get_headers(self, token=None):
         headers = self.base_headers.copy()
         if token:

@@ -1,6 +1,3 @@
-import pytest
-
-
 
 def test_get_all_memes(create_get_all_memes_endpoint, create_token_for_test):
     create_get_all_memes_endpoint.get_memes(create_token_for_test)

@@ -1,6 +1,6 @@
 from endpoints.meme.base_meme import BaseMeme
 import requests
-from test_s.test_meme.test_data.data import generate_meme_data
+from test_s.data import generate_meme_data
 import allure
 
 class PutMeme(BaseMeme):

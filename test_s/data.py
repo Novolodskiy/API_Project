@@ -1,5 +1,6 @@
 from faker import Faker
 
+
 def generate_meme_data():
     fake = Faker()
     return {
