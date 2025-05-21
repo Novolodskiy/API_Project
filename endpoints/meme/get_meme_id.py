@@ -9,5 +9,5 @@ class GetMemeById(BaseMeme):
         url = f"{self.url}/{meme_id}"
         self.response = requests.get(url, headers=self.get_headers(cache_data["token"]))
         self.status_code = self.response.status_code
-        print(self.response.json(), self.status_code)
+        print(self.response, self.status_code)
         return self.response

@@ -1,10 +1,20 @@
 import pytest
+from endpoints.authorize.get_authorize_token import GetAuthorizeToken
+from endpoints.authorize.post_authorize import PostAuthorize
 from endpoints.meme.get_meme import GetMemes
 from endpoints.meme.get_meme_id import GetMemeById
 from endpoints.meme.post_meme import PostMeme
 from endpoints.meme.put_meme import PutMeme
 from endpoints.meme.delete_meme import DeleteMeme
 
+
+@pytest.fixture()
+def create_get_authorize_token_endpoint():
+    return GetAuthorizeToken()
+
+@pytest.fixture()
+def create_post_authorize_endpoint():
+    return PostAuthorize()
 
 @pytest.fixture()
 def create_get_all_memes_endpoint():
